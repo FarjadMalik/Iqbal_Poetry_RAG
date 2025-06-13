@@ -1,6 +1,36 @@
+---
+title: "Iqbal Poetry RAG System"
+emoji: "📜"
+colorFrom: "yellow"
+colorTo: "purple"
+sdk: "gradio"
+python_version: "3.10"
+app_file: "app.py"
+short_description: "A Gradio RAG app for exploring and querying the poetry of Allama Iqbal."
+tags:
+  - rag
+  - poetry
+  - gradio
+  - iqbal
+  - language-models
+---
+
 # Iqbal Poetry RAG System
 
 A Retrieval-Augmented Generation (RAG) system for exploring and querying the poetry of Allama Iqbal. This project leverages vector search and large language models (LLMs) to answer questions about Iqbal's poetry, providing relevant poem excerpts as context.
+
+---
+
+## 🚀 Hugging Face Spaces Ready
+
+This project is ready to be deployed as a [Hugging Face Space](https://huggingface.co/spaces). The configuration block above (in YAML) tells Hugging Face how to launch the app:
+- **sdk**: Uses Gradio for the web interface.
+- **app_file**: Entry point for the app (`app/main.py`).
+- **python_version**: Uses Python 3.10.
+- **short_description**: Shown in the Space's thumbnail.
+- **tags**: For discoverability.
+
+To deploy, simply upload this repository to your Hugging Face account as a new Space.
 
 ---
 
@@ -8,6 +38,8 @@ A Retrieval-Augmented Generation (RAG) system for exploring and querying the poe
 
 - **Semantic Search**: Retrieve the most relevant poems for a given question using vector embeddings.
 - **LLM-Powered Answers**: Generate answers using a language model, grounded in retrieved poem context.
+- **Gradio Interface**: User-friendly web interface powered by [Gradio](https://gradio.app/).
+- **Plug-and-Play Dataset**: The poetry dataset is already included in the repository, with all paths set up for immediate use.
 - **Configurable**: Easily adjust retrieval thresholds, model settings, and data sources.
 - **Error Handling**: Robust error management for smoother user experience.
 - **(Optional) Feedback Logging**: Log user feedback for continuous improvement.
@@ -38,38 +70,43 @@ uv pip install -r requirements.txt
 
 ## Usage
 
-1. **Prepare your data**: Place your poems JSON file at the path specified in `app/config.py` (`JSON_FILE_PATH`).
-2. **Run the main application** (example, adjust as needed):
+**Just plug and run!**  
+The poetry dataset is already included in the repository, and all file paths are set up using relative paths. No additional data preparation is required.
+
+To launch the Gradio app locally:
 
 ```bash
 python app/main.py
 ```
 
-3. **Query the system**: Enter your question about Iqbal's poetry and receive contextually grounded answers.
+This will start a Gradio web interface in your browser, where you can enter your questions about Iqbal's poetry and receive contextually grounded answers.
 
 ---
 
 ## Project Structure
 
-```bash
+```
 iqbal_poetry_rag/
 │
 ├── app/
-│ ├── RAGSystem.py # Main RAG system class
-│ ├── main.py # Entry point for the application
-│ └── config.py # Configuration (thresholds, file paths, etc.)
+│   ├── RAGSystem.py         # Main RAG system class
+│   ├── main.py              # Entry point for the Gradio app
+│   └── config.py            # Configuration (thresholds, file paths, etc.)
 │
 ├── rag/
-│ ├── vector_store.py # Vector store initialization and building
-│ ├── retriever.py # Retriever configuration
-│ ├── llm.py # LLM initialization and prompt management
+│   ├── vector_store.py      # Vector store initialization and building
+│   ├── retriever.py         # Retriever configuration
+│   ├── llm.py               # LLM initialization and prompt management
 │
 ├── utils/
-│ ├── error_handling.py # Error handling decorators
-│ └── feedback_logger.py # (Optional) Feedback logging
+│   ├── error_handling.py    # Error handling decorators
+│   └── feedback_logger.py   # (Optional) Feedback logging
 │
-├── requirements.txt # Project dependencies
-└── README.md # This file
+├── dataset/
+│   └── poems.json           # Iqbal's poetry dataset (already included)
+│
+├── requirements.txt         # Project dependencies
+└── README.md                # This file
 ```
 
 ---
@@ -79,7 +116,7 @@ iqbal_poetry_rag/
 Edit `app/config.py` to set:
 
 - `SCORE_THRESHOLD`: Minimum similarity score for retrieved poems.
-- `JSON_FILE_PATH`: Path to your poems data file.
+- `JSON_FILE_PATH`: Path to your poems data file (already set to the included dataset).
 
 ---
 
@@ -98,4 +135,10 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 ## Acknowledgements
 
 - Inspired by the poetry of Allama Iqbal.
-- Built with Python, vector search, and LLM technologies.
+- Built with Python, Gradio, vector search, and LLM technologies.
+
+---
+
+## References
+
+- [Hugging Face Spaces Configuration Reference](https://huggingface.co/docs/hub/spaces-config-reference)
