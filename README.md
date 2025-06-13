@@ -5,7 +5,7 @@ colorFrom: "yellow"
 colorTo: "purple"
 sdk: "gradio"
 python_version: "3.10"
-app_file: "app.py"
+start_command: "bash start.sh"
 short_description: "A Gradio RAG app for querying the poetry of Allama Iqbal."
 tags:
   - rag
