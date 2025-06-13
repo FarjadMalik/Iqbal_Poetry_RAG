@@ -1,5 +1,6 @@
 # === Python virtual environments ===
 .env_iqbal_rag/
+.env
 
 # === Python cache and compiled files ===
 __pycache__/
@@ -7,8 +8,8 @@ __pycache__/
 *.pyo
 *.pyd
 
-# === Dataset (do not track poetry data) ===
-data/
+# === Outputs (do not track poetry databases etc) ===
+outputs/
 
 # === Not Implemented Features ===
 sft/

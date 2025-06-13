@@ -1,6 +1,6 @@
 """Retriever configuration for the RAG system."""
 
-from app.config import RETRIEVER_K, RETRIEVER_FETCH_K, RETRIEVER_LAMBDA_MULT
+from interface.config import RETRIEVER_K, RETRIEVER_FETCH_K, RETRIEVER_LAMBDA_MULT
 
 def configure_retriever(vector_store):
     """Configure and return the retriever."""

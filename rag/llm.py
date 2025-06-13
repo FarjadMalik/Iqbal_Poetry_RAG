@@ -4,7 +4,7 @@ from langchain_community.chat_models import ChatPerplexity
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain_community.llms import HuggingFacePipeline
-from app.config import PERPLEXITY_API_KEY, LLM_MODEL
+from interface.config import LLM_MODEL
 
 def initialize_llm():
     """Initialize and return the LLM."""

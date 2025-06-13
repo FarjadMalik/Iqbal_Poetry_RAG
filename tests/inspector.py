@@ -102,7 +102,7 @@ class ChromaVectorStoreInspector:
 # Usage example
 if __name__ == "__main__":
     from rag.embeddings import get_embeddings  # Your existing embeddings setup
-    from app.config import CHROMA_DB_DIR  # Your config
+    from interface.config import CHROMA_DB_DIR  # Your config
     
     # Initialize inspector
     inspector = ChromaVectorStoreInspector(

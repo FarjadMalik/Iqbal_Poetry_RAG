@@ -4,7 +4,7 @@ import json
 import os
 from langchain_chroma import Chroma  # Updated import
 from langchain_core.documents import Document
-from app.config import CHROMA_DB_DIR
+from interface.config import CHROMA_DB_DIR
 from rag.embeddings import get_embeddings
 
 def initialize_vector_store():
