@@ -6,7 +6,7 @@ colorTo: "purple"
 sdk: "gradio"
 python_version: "3.10"
 app_file: "app.py"
-short_description: "A Gradio RAG app for exploring and querying the poetry of Allama Iqbal."
+short_description: "A Gradio RAG app for querying the poetry of Allama Iqbal."
 tags:
   - rag
   - poetry
