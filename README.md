@@ -21,7 +21,7 @@ A Retrieval-Augmented Generation (RAG) system for exploring and querying the poe
 
 Note: On first run your will need to set up the vector embeddings store so the set up and initialization can take a few hours dependings on the performance of your PC.
 
-![Teaser image of the system in action](outputs\Iqbal Khudi Teaser.png)
+![Teaser image of the system in action](data\Iqbal Khudi Teaser.png)
 
 ---
 
