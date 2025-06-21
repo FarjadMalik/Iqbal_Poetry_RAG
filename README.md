@@ -21,19 +21,7 @@ A Retrieval-Augmented Generation (RAG) system for exploring and querying the poe
 
 Note: On first run your will need to set up the vector embeddings store so the set up and initialization can take a few hours dependings on the performance of your PC.
 
----
-
-## 🚀 Hugging Face Spaces Ready
-
-### In Progress: 
-This project is ready to be deployed as a [Hugging Face Space](https://huggingface.co/spaces). The configuration block above (in YAML) tells Hugging Face how to launch the app:
-- **sdk**: Uses Gradio for the web interface.
-- **app_file**: Entry point for the app (`app.py`).
-- **python_version**: Uses Python 3.10.
-- **short_description**: Shown in the Space's thumbnail.
-- **tags**: For discoverability.
-
-To deploy, simply upload this repository to your Hugging Face account as a new Space.
+![Teaser image of the system in action](outputs\Iqbal Khudi Teaser.png)
 
 ---
 
@@ -132,6 +120,20 @@ Edit `interface/config.py` to set:
 HUGGING_FACE_TOKEN = <YOUR_TOKEN>)
 - `SCORE_THRESHOLD`: Minimum similarity score for retrieved poems.
 - `JSON_FILE_PATH`: Path to your poems data file (already set to the included dataset).
+
+---
+
+## 🚀 Hugging Face Spaces Ready
+
+### In Progress: 
+This project is ready to be deployed as a [Hugging Face Space](https://huggingface.co/spaces). The configuration block above (in YAML) tells Hugging Face how to launch the app:
+- **sdk**: Uses Gradio for the web interface.
+- **app_file**: Entry point for the app (`app.py`).
+- **python_version**: Uses Python 3.10.
+- **short_description**: Shown in the Space's thumbnail.
+- **tags**: For discoverability.
+
+To deploy, simply upload this repository to your Hugging Face account as a new Space.
 
 ---
 
